@@ -2,7 +2,7 @@
 
 An interactive course library for mastering machine learning, deep learning, and generative AI concepts through structured modules and visual slides.
 
-![Course Library Preview](https://learningmachinelearning.lovable.app/assets/slide-01-3zQKK8yK.jpg)
+![Course Library Preview](https://github.com/jayrosen-design/learning-machine-learning/blob/main/src/assets/learningmachinelearning.png?raw=true)
 
 ## 📚 Course Catalog
 

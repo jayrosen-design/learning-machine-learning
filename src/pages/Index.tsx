@@ -7,8 +7,7 @@ const Index = () => {
   const navigate = useNavigate();
 
   const handleCourseClick = (courseId: number) => {
-    // Navigate to course detail page (can be implemented later)
-    navigate(`/flashcards`);
+    navigate(`/course/${courseId}`);
   };
 
   return (

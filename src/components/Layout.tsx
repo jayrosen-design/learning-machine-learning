@@ -41,7 +41,7 @@ const Layout = ({ children, title, subtitle, tag }: LayoutProps) => {
               <Network className="w-4 h-4" />
             </div>
             <h1 className="font-display font-bold text-lg tracking-tight text-foreground">
-              NeuroLearn
+              Learning ML
             </h1>
           </Link>
 

@@ -9,6 +9,7 @@ import { pytorchModules, type Module } from "@/data/courses/pytorch-course";
 import { ragModules } from "@/data/courses/rag-course";
 import { genaiModules } from "@/data/courses/genai-course";
 import { machineryModules } from "@/data/courses/machinery-course";
+import { engineeringModules } from "@/data/courses/engineering-course";
 import { coursesData } from "@/data/flashcards";
 
 // Map course IDs to their modules
@@ -17,6 +18,7 @@ const courseModulesMap: Record<string, Module[]> = {
   "2": ragModules,
   "3": genaiModules,
   "4": machineryModules,
+  "5": engineeringModules,
 };
 
 const CoursePage = () => {

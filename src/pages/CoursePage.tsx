@@ -7,12 +7,14 @@ import { ChevronLeft, ChevronRight, ArrowLeft, List, Grid } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { pytorchModules, type Module } from "@/data/courses/pytorch-course";
 import { ragModules } from "@/data/courses/rag-course";
+import { genaiModules } from "@/data/courses/genai-course";
 import { coursesData } from "@/data/flashcards";
 
 // Map course IDs to their modules
 const courseModulesMap: Record<string, Module[]> = {
   "1": pytorchModules,
   "2": ragModules,
+  "3": genaiModules,
 };
 
 const CoursePage = () => {

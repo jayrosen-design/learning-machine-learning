@@ -1,5 +1,5 @@
-import { useState, useCallback, useMemo } from "react";
-import { ChevronLeft, ChevronRight, RotateCcw, Shuffle, Grid, Layers } from "lucide-react";
+import { useState, useCallback } from "react";
+import { ChevronLeft, ChevronRight, RotateCcw, Shuffle, Grid, Layers, FlipVertical } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import Flashcard from "./Flashcard";
@@ -25,6 +25,7 @@ const FlashcardDeck = ({ cards, title = "Flashcards" }: FlashcardDeckProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [shuffledCards, setShuffledCards] = useState<FlashcardType[]>(cards);
   const [viewMode, setViewMode] = useState<"single" | "grid">("single");
+  const [showAnswers, setShowAnswers] = useState(false);
   
   const totalCards = shuffledCards.length;
 
@@ -39,6 +40,7 @@ const FlashcardDeck = ({ cards, title = "Flashcards" }: FlashcardDeckProps) => {
   const resetDeck = useCallback(() => {
     setCurrentIndex(0);
     setShuffledCards(cards);
+    setShowAnswers(false);
   }, [cards]);
 
   const shuffleDeck = useCallback(() => {
@@ -49,6 +51,10 @@ const FlashcardDeck = ({ cards, title = "Flashcards" }: FlashcardDeckProps) => {
   const goToCard = useCallback((index: number) => {
     setCurrentIndex(index);
     setViewMode("single");
+  }, []);
+
+  const toggleShowAnswers = useCallback(() => {
+    setShowAnswers((prev) => !prev);
   }, []);
 
   const progress = ((currentIndex + 1) / totalCards) * 100;
@@ -80,7 +86,7 @@ const FlashcardDeck = ({ cards, title = "Flashcards" }: FlashcardDeckProps) => {
       onKeyDown={handleKeyDown}
       tabIndex={0}
     >
-      {/* View mode toggle and shuffle */}
+      {/* View mode toggle and controls */}
       <div className="flex items-center justify-center gap-2 mb-6">
         <Button
           variant={viewMode === "single" ? "secondary" : "ghost"}
@@ -99,6 +105,16 @@ const FlashcardDeck = ({ cards, title = "Flashcards" }: FlashcardDeckProps) => {
         >
           <Grid className="h-4 w-4" />
           Grid
+        </Button>
+        <div className="w-px h-6 bg-border mx-2" />
+        <Button
+          variant={showAnswers ? "secondary" : "ghost"}
+          size="sm"
+          onClick={toggleShowAnswers}
+          className="gap-2"
+        >
+          <FlipVertical className="h-4 w-4" />
+          {showAnswers ? "Answers" : "Questions"}
         </Button>
         <div className="w-px h-6 bg-border mx-2" />
         <Button
@@ -135,9 +151,10 @@ const FlashcardDeck = ({ cards, title = "Flashcards" }: FlashcardDeckProps) => {
                 
                 {/* Main card */}
                 <Flashcard
-                  key={currentCard.id}
+                  key={`${currentCard.id}-${showAnswers}`}
                   question={currentCard.question}
                   answer={currentCard.answer}
+                  forceFlipped={showAnswers}
                 />
               </div>
 
@@ -198,9 +215,15 @@ const FlashcardDeck = ({ cards, title = "Flashcards" }: FlashcardDeckProps) => {
                 <span className="text-[10px] font-display text-primary tracking-wider mb-2">
                   #{index + 1} • {card.category}
                 </span>
-                <p className="text-sm text-foreground line-clamp-4 flex-1">
-                  {card.question}
-                </p>
+                {showAnswers ? (
+                  <p className="text-sm font-semibold text-primary line-clamp-4 flex-1">
+                    {card.answer}
+                  </p>
+                ) : (
+                  <p className="text-sm text-foreground line-clamp-4 flex-1">
+                    {card.question}
+                  </p>
+                )}
               </div>
             </button>
           ))}

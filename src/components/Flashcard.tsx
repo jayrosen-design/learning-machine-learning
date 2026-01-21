@@ -19,7 +19,7 @@ const Flashcard = ({ question, answer, className }: FlashcardProps) => {
   return (
     <div
       className={cn(
-        "flashcard-container w-full max-w-md aspect-[3/4] cursor-pointer",
+        "flashcard-container w-full max-w-xl aspect-[4/3] cursor-pointer",
         className
       )}
       onClick={handleFlip}

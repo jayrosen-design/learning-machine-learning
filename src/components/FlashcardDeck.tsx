@@ -54,7 +54,7 @@ const FlashcardDeck = ({ cards, title = "Flashcards" }: FlashcardDeckProps) => {
       tabIndex={0}
     >
       {/* Main flashcard area */}
-      <div className="relative flex items-center justify-center w-full max-w-2xl gap-4 md:gap-8">
+      <div className="relative flex items-center justify-center w-full max-w-4xl gap-6 md:gap-12 px-4">
         {/* Previous button */}
         <Button
           variant="ghost"

@@ -110,7 +110,7 @@ export const coursesData = [
     id: 5,
     title: "Engineering Responsibility",
     description: "The mechanics, ethics, and safety of Generative AI. From Chain-of-Thought to Alignment Protocols.",
-    moduleCount: 4,
+    moduleCount: 15,
     progress: 0,
     status: "not-started" as const,
     tag: "SAFETY",

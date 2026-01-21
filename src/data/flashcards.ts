@@ -100,7 +100,7 @@ export const coursesData = [
     id: 4,
     title: "The Machinery of Thought",
     description: "From probabilistic autocomplete to System 2 reasoning. Deconstructing LLMs and Diffusion Models.",
-    moduleCount: 6,
+    moduleCount: 15,
     progress: 0,
     status: "not-started" as const,
     tag: "NEURAL NETWORKS",

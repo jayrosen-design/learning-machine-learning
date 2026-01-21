@@ -1,73 +1,103 @@
-# Welcome to your Lovable project
+# Learning Machine Learning
 
-## Project info
+An interactive course library for mastering machine learning, deep learning, and generative AI concepts through structured modules and visual slides.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+![Course Library Preview](https://raw.githubusercontent.com/jayrosen-design/learning-machine-learning/main/src/assets/course-slides/fm-mastery/slide-01.jpg)
 
-## How can I edit this code?
+## 📚 Course Catalog
 
-There are several ways of editing your application.
+### Core Foundations
 
-**Use Lovable**
+| Course | Description | Modules |
+|--------|-------------|---------|
+| ![](https://raw.githubusercontent.com/jayrosen-design/learning-machine-learning/main/src/assets/pytorch-thumbnail.png) | **Building Neural Networks** - A mechanic's guide to PyTorch. From tensors to training loops. | 15 |
+| ![](https://raw.githubusercontent.com/jayrosen-design/learning-machine-learning/main/src/assets/course-slides/deep-learning/slide-01.jpg) | **Anatomy of Deep Learning** - Building a brain from scratch. Perceptrons to backpropagation. | 13 |
+| ![](https://raw.githubusercontent.com/jayrosen-design/learning-machine-learning/main/src/assets/machinery-thumbnail.png) | **The Machinery of Thought** - From probabilistic autocomplete to System 2 reasoning. LLMs and Diffusion Models. | 15 |
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### Generative AI
 
-Changes made via Lovable will be committed automatically to this repo.
+| Course | Description | Modules |
+|--------|-------------|---------|
+| ![](https://raw.githubusercontent.com/jayrosen-design/learning-machine-learning/main/src/assets/genai-thumbnail.png) | **Foundations of GenAI** - From deep learning to enterprise scale. Architectural definitions and business value. | 15 |
+| ![](https://raw.githubusercontent.com/jayrosen-design/learning-machine-learning/main/src/assets/course-slides/fm-mastery/slide-01.jpg) | **Foundation Model Mastery** - From zero-shot to advanced reasoning agents. Prompt engineering guide. | 15 |
+| ![](https://raw.githubusercontent.com/jayrosen-design/learning-machine-learning/main/src/assets/course-slides/fm-strategic/slide-01.jpg) | **Foundation Models: Strategic** - The paradigm shift, open revolution, and multimodal frontier. | 15 |
 
-**Use your preferred IDE**
+### Prompt Engineering & Agents
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+| Course | Description | Modules |
+|--------|-------------|---------|
+| ![](https://raw.githubusercontent.com/jayrosen-design/learning-machine-learning/main/src/assets/course-slides/personas/slide-01.jpg) | **Scripting AI Personas** - Role-based prompting. Crafting specialized personas for quality outputs. | 15 |
+| ![](https://raw.githubusercontent.com/jayrosen-design/learning-machine-learning/main/src/assets/course-slides/agents/slide-01.jpg) | **LLMs to AI Agents** - From adaptation to autonomous action. RAG, fine-tuning, and agents. | 15 |
+| ![](https://raw.githubusercontent.com/jayrosen-design/learning-machine-learning/main/src/assets/rag-thumbnail.png) | **RAG Architectures** - Retrieval Augmented Generation on AWS. Decision frameworks for enterprise. | 15 |
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Safety & Evaluation
 
-Follow these steps:
+| Course | Description | Modules |
+|--------|-------------|---------|
+| ![](https://raw.githubusercontent.com/jayrosen-design/learning-machine-learning/main/src/assets/safety-thumbnail.png) | **Engineering Responsibility** - The mechanics, ethics, and safety of Generative AI. | 15 |
+| ![](https://raw.githubusercontent.com/jayrosen-design/learning-machine-learning/main/src/assets/course-slides/governance/slide-01.jpg) | **GenAI Practice & Governance** - Workflows, application, and oversight. From NIST to UNESCO. | 14 |
+| ![](https://raw.githubusercontent.com/jayrosen-design/learning-machine-learning/main/src/assets/course-slides/evaluation/slide-01.jpg) | **GenAI Evaluation Methods** - From exact match to LLM-as-a-judge. A practitioner's toolkit. | 13 |
+
+## ✨ Features
+
+- **Interactive Slide Carousels** - Navigate through course content with visual slides
+- **Flashcard Study Mode** - Reinforce learning with categorized flashcards
+- **Progress Tracking** - Track your advancement through each course
+- **Responsive Design** - Learn on any device with a mobile-friendly interface
+
+## 🛠️ Tech Stack
+
+- **React** + **TypeScript** - Modern frontend development
+- **Vite** - Fast build tooling
+- **Tailwind CSS** - Utility-first styling
+- **shadcn/ui** - Accessible component library
+- **Framer Motion** - Smooth animations
+
+## 🚀 Getting Started
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clone the repository
+git clone https://github.com/jayrosen-design/learning-machine-learning.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project
+cd learning-machine-learning
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## 📁 Project Structure
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```
+src/
+├── assets/
+│   └── course-slides/     # Course slide images
+│       ├── agents/
+│       ├── deep-learning/
+│       ├── engineering/
+│       ├── evaluation/
+│       ├── fm-mastery/
+│       ├── fm-strategic/
+│       ├── genai/
+│       ├── governance/
+│       ├── machinery/
+│       ├── personas/
+│       ├── pytorch/
+│       └── rag/
+├── components/            # Reusable UI components
+├── data/
+│   └── courses/          # Course module definitions
+├── pages/                # Route pages
+└── hooks/                # Custom React hooks
+```
 
-**Use GitHub Codespaces**
+## 📄 License
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+This project is open source and available under the MIT License.
 
-## What technologies are used for this project?
+---
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Built with [Lovable](https://lovable.dev)

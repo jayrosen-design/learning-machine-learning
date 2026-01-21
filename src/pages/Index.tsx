@@ -1,13 +1,38 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Layout from "@/components/Layout";
+import CourseCard from "@/components/CourseCard";
+import { coursesData } from "@/data/flashcards";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
+
+  const handleCourseClick = (courseId: number) => {
+    // Navigate to course detail page (can be implemented later)
+    navigate(`/flashcards`);
+  };
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <Layout
+      title="Course Library"
+      subtitle="Master the mechanics of deep learning through interactive blueprints and rigorous technical documentation."
+      tag="ENGINEERING TRACK"
+      showSearch
+    >
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
+        {coursesData.map((course) => (
+          <CourseCard
+            key={course.id}
+            title={course.title}
+            description={course.description}
+            moduleCount={course.moduleCount}
+            progress={course.progress}
+            status={course.status}
+            tag={course.tag}
+            onClick={() => handleCourseClick(course.id)}
+          />
+        ))}
       </div>
-    </div>
+    </Layout>
   );
 };
 

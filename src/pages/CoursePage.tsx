@@ -6,7 +6,14 @@ import { Progress } from "@/components/ui/progress";
 import { ChevronLeft, ChevronRight, ArrowLeft, List, Grid } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { pytorchModules, type Module } from "@/data/courses/pytorch-course";
+import { ragModules } from "@/data/courses/rag-course";
 import { coursesData } from "@/data/flashcards";
+
+// Map course IDs to their modules
+const courseModulesMap: Record<string, Module[]> = {
+  "1": pytorchModules,
+  "2": ragModules,
+};
 
 const CoursePage = () => {
   const { courseId } = useParams();
@@ -17,8 +24,8 @@ const CoursePage = () => {
   // Get course data based on courseId
   const course = coursesData.find((c) => c.id === Number(courseId));
   
-  // For now, only PyTorch course has modules
-  const modules = courseId === "1" ? pytorchModules : [];
+  // Get modules for this course
+  const modules = courseId ? courseModulesMap[courseId] || [] : [];
 
   const totalModules = modules.length;
   const currentModule = modules[currentModuleIndex];

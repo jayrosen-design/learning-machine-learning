@@ -58,6 +58,13 @@ export const flashcardsData: Flashcard[] = [
   { id: 50, question: "Which framework retrieves information from an external vector database to ground an LLM's response?", answer: "Retrieval Augmented Generation (RAG)", category: "RAG" },
 ];
 
+import pytorchThumbnail from "@/assets/pytorch-thumbnail.png";
+import ragThumbnail from "@/assets/rag-thumbnail.png";
+import safetyThumbnail from "@/assets/safety-thumbnail.png";
+import machineryThumbnail from "@/assets/machinery-thumbnail.png";
+import foundationThumbnail from "@/assets/foundation-thumbnail.png";
+import genaiThumbnail from "@/assets/genai-thumbnail.png";
+
 export const coursesData = [
   {
     id: 1,
@@ -67,6 +74,7 @@ export const coursesData = [
     progress: 45,
     status: "in-progress" as const,
     tag: "ENGINEERING TRACK",
+    imageUrl: pytorchThumbnail,
   },
   {
     id: 2,
@@ -76,6 +84,7 @@ export const coursesData = [
     progress: 0,
     status: "not-started" as const,
     tag: "ARCHITECTURE",
+    imageUrl: ragThumbnail,
   },
   {
     id: 3,
@@ -85,32 +94,36 @@ export const coursesData = [
     progress: 100,
     status: "completed" as const,
     tag: "FOUNDATIONS",
+    imageUrl: genaiThumbnail,
   },
   {
     id: 4,
-    title: "Building a Brain",
-    description: "From the atomic perceptron to deep neural architectures. Solving the XOR problem and understanding backpropagation.",
+    title: "The Machinery of Thought",
+    description: "From probabilistic autocomplete to System 2 reasoning. Deconstructing LLMs and Diffusion Models.",
     moduleCount: 6,
     progress: 0,
     status: "not-started" as const,
     tag: "NEURAL NETWORKS",
+    imageUrl: machineryThumbnail,
   },
   {
     id: 5,
-    title: "The Goal: Loss Functions",
-    description: "You cannot improve what you cannot measure. Deep dive into CrossEntropyLoss, MSELoss, and the loss landscape.",
+    title: "Engineering Responsibility",
+    description: "The mechanics, ethics, and safety of Generative AI. From Chain-of-Thought to Alignment Protocols.",
     moduleCount: 4,
     progress: 0,
     status: "not-started" as const,
-    tag: "OPTIMIZATION",
+    tag: "SAFETY",
+    imageUrl: safetyThumbnail,
   },
   {
     id: 6,
-    title: "Transformer Architecture",
-    description: "Attention is all you need. Deconstructing the architecture that changed the world of NLP.",
+    title: "Foundation Model Mastery",
+    description: "The next frontier: from language to world models. Directing intelligence and embodied agents.",
     moduleCount: 10,
     progress: 0,
     status: "locked" as const,
     tag: "COMING SOON",
+    imageUrl: foundationThumbnail,
   },
 ];

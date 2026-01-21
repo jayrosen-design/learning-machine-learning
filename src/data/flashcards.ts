@@ -95,17 +95,26 @@ import machineryThumbnail from "@/assets/machinery-thumbnail.png";
 import foundationThumbnail from "@/assets/foundation-thumbnail.png";
 import genaiThumbnail from "@/assets/genai-thumbnail.png";
 
+// Course slide thumbnails (first slide of each course)
+import governanceSlide01 from "@/assets/course-slides/governance/slide-01.jpg";
+import fmMasterySlide01 from "@/assets/course-slides/fm-mastery/slide-01.jpg";
+import fmStrategicSlide01 from "@/assets/course-slides/fm-strategic/slide-01.jpg";
+import deepLearningSlide01 from "@/assets/course-slides/deep-learning/slide-01.jpg";
+import evaluationSlide01 from "@/assets/course-slides/evaluation/slide-01.jpg";
+import personasSlide01 from "@/assets/course-slides/personas/slide-01.jpg";
+import agentsSlide01 from "@/assets/course-slides/agents/slide-01.jpg";
+
 export const coursesData = [
   { id: 1, title: "Building Neural Networks", description: "A mechanic's guide to PyTorch. From tensors to training loops.", moduleCount: 15, progress: 0, status: "not-started" as const, tag: "PYTORCH", imageUrl: pytorchThumbnail },
   { id: 2, title: "RAG Architectures", description: "Retrieval Augmented Generation on AWS. Decision frameworks for enterprise.", moduleCount: 15, progress: 0, status: "not-started" as const, tag: "ARCHITECTURE", imageUrl: ragThumbnail },
   { id: 3, title: "Foundations of GenAI", description: "From deep learning to enterprise scale. Architectural definitions and business value.", moduleCount: 15, progress: 0, status: "not-started" as const, tag: "FOUNDATIONS", imageUrl: genaiThumbnail },
   { id: 4, title: "The Machinery of Thought", description: "From probabilistic autocomplete to System 2 reasoning. LLMs and Diffusion Models.", moduleCount: 15, progress: 0, status: "not-started" as const, tag: "NEURAL NETWORKS", imageUrl: machineryThumbnail },
   { id: 5, title: "Engineering Responsibility", description: "The mechanics, ethics, and safety of Generative AI.", moduleCount: 15, progress: 0, status: "not-started" as const, tag: "SAFETY", imageUrl: safetyThumbnail },
-  { id: 6, title: "GenAI Practice & Governance", description: "Workflows, application, and oversight. From NIST to UNESCO.", moduleCount: 14, progress: 0, status: "not-started" as const, tag: "GOVERNANCE", imageUrl: foundationThumbnail },
-  { id: 7, title: "Foundation Model Mastery", description: "From zero-shot to advanced reasoning agents. Prompt engineering guide.", moduleCount: 15, progress: 0, status: "not-started" as const, tag: "PROMPTING", imageUrl: foundationThumbnail },
-  { id: 8, title: "Foundation Models: Strategic", description: "The paradigm shift, open revolution, and multimodal frontier.", moduleCount: 15, progress: 0, status: "not-started" as const, tag: "STRATEGY", imageUrl: foundationThumbnail },
-  { id: 9, title: "Anatomy of Deep Learning", description: "Building a brain from scratch. Perceptrons to backpropagation.", moduleCount: 13, progress: 0, status: "not-started" as const, tag: "DEEP LEARNING", imageUrl: machineryThumbnail },
-  { id: 10, title: "GenAI Evaluation Methods", description: "From exact match to LLM-as-a-judge. A practitioner's toolkit.", moduleCount: 13, progress: 0, status: "not-started" as const, tag: "EVALUATION", imageUrl: safetyThumbnail },
-  { id: 11, title: "Scripting AI Personas", description: "Role-based prompting. Crafting specialized personas for quality outputs.", moduleCount: 15, progress: 0, status: "not-started" as const, tag: "PROMPTING", imageUrl: genaiThumbnail },
-  { id: 12, title: "LLMs to AI Agents", description: "From adaptation to autonomous action. RAG, fine-tuning, and agents.", moduleCount: 15, progress: 0, status: "not-started" as const, tag: "AGENTS", imageUrl: pytorchThumbnail },
+  { id: 6, title: "GenAI Practice & Governance", description: "Workflows, application, and oversight. From NIST to UNESCO.", moduleCount: 14, progress: 0, status: "not-started" as const, tag: "GOVERNANCE", imageUrl: governanceSlide01 },
+  { id: 7, title: "Foundation Model Mastery", description: "From zero-shot to advanced reasoning agents. Prompt engineering guide.", moduleCount: 15, progress: 0, status: "not-started" as const, tag: "PROMPTING", imageUrl: fmMasterySlide01 },
+  { id: 8, title: "Foundation Models: Strategic", description: "The paradigm shift, open revolution, and multimodal frontier.", moduleCount: 15, progress: 0, status: "not-started" as const, tag: "STRATEGY", imageUrl: fmStrategicSlide01 },
+  { id: 9, title: "Anatomy of Deep Learning", description: "Building a brain from scratch. Perceptrons to backpropagation.", moduleCount: 13, progress: 0, status: "not-started" as const, tag: "DEEP LEARNING", imageUrl: deepLearningSlide01 },
+  { id: 10, title: "GenAI Evaluation Methods", description: "From exact match to LLM-as-a-judge. A practitioner's toolkit.", moduleCount: 13, progress: 0, status: "not-started" as const, tag: "EVALUATION", imageUrl: evaluationSlide01 },
+  { id: 11, title: "Scripting AI Personas", description: "Role-based prompting. Crafting specialized personas for quality outputs.", moduleCount: 15, progress: 0, status: "not-started" as const, tag: "PROMPTING", imageUrl: personasSlide01 },
+  { id: 12, title: "LLMs to AI Agents", description: "From adaptation to autonomous action. RAG, fine-tuning, and agents.", moduleCount: 15, progress: 0, status: "not-started" as const, tag: "AGENTS", imageUrl: agentsSlide01 },
 ];

@@ -28,6 +28,7 @@ const Index = () => {
             progress={course.progress}
             status={course.status}
             tag={course.tag}
+            imageUrl={course.imageUrl}
             onClick={() => handleCourseClick(course.id)}
           />
         ))}

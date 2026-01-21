@@ -91,7 +91,7 @@ const FlashcardDeck = ({ cards, title = "Flashcards" }: FlashcardDeckProps) => {
       </div>
 
       {/* Progress bar and controls */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-full max-w-md px-4 flex items-center gap-4">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-full max-w-2xl px-4 flex items-center gap-6">
         <Button
           variant="ghost"
           size="icon"

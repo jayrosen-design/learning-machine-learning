@@ -15,7 +15,6 @@ const Index = () => {
       title="Course Library"
       subtitle="Master the mechanics of deep learning through interactive blueprints and rigorous technical documentation."
       tag="ENGINEERING TRACK"
-      showSearch
     >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
         {coursesData.map((course) => (

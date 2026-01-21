@@ -1,6 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Search, Filter, Network, GraduationCap, Layers, Moon, Sun } from "lucide-react";
-import { Input } from "@/components/ui/input";
+import { Network, GraduationCap, Layers, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
@@ -10,7 +9,6 @@ interface LayoutProps {
   title?: string;
   subtitle?: string;
   tag?: string;
-  showSearch?: boolean;
 }
 
 const navItems = [
@@ -18,7 +16,7 @@ const navItems = [
   { title: "Flashcards", url: "/flashcards", icon: Layers },
 ];
 
-const Layout = ({ children, title, subtitle, tag, showSearch = false }: LayoutProps) => {
+const Layout = ({ children, title, subtitle, tag }: LayoutProps) => {
   const location = useLocation();
   const [isDark, setIsDark] = useState(false);
 
@@ -72,20 +70,6 @@ const Layout = ({ children, title, subtitle, tag, showSearch = false }: LayoutPr
 
           {/* Right side actions */}
           <div className="flex items-center gap-2">
-            {showSearch && (
-              <div className="flex gap-2">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                  <Input
-                    placeholder="Search modules..."
-                    className="pl-9 w-64 bg-background"
-                  />
-                </div>
-                <Button variant="outline" size="icon">
-                  <Filter className="h-4 w-4" />
-                </Button>
-              </div>
-            )}
             <Button
               variant="ghost"
               size="icon"

@@ -6,7 +6,7 @@ const FlashcardsPage = () => {
   return (
     <Layout
       title="Flashcard Deck"
-      subtitle="Test your knowledge with 50 AI/ML concept flashcards. Click a card to reveal the answer."
+      subtitle="Test your knowledge with 80 AI/ML concept flashcards. Click a card to reveal the answer."
       tag="STUDY MODE"
     >
       <FlashcardDeck cards={flashcardsData} />

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -7,10 +7,18 @@ interface FlashcardProps {
   question: string;
   answer: string;
   className?: string;
+  forceFlipped?: boolean;
 }
 
-const Flashcard = ({ question, answer, className }: FlashcardProps) => {
+const Flashcard = ({ question, answer, className, forceFlipped }: FlashcardProps) => {
   const [isFlipped, setIsFlipped] = useState(false);
+
+  // Sync with forceFlipped prop when it changes
+  useEffect(() => {
+    if (forceFlipped !== undefined) {
+      setIsFlipped(forceFlipped);
+    }
+  }, [forceFlipped]);
 
   const handleFlip = () => {
     setIsFlipped(!isFlipped);

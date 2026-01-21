@@ -2,7 +2,7 @@
 
 An interactive course library for mastering machine learning, deep learning, and generative AI concepts through structured modules and visual slides.
 
-![Course Library Preview](https://raw.githubusercontent.com/jayrosen-design/learning-machine-learning/main/src/assets/course-slides/fm-mastery/slide-01.jpg)
+![Course Library Preview](https://learningmachinelearning.lovable.app/assets/slide-01-3zQKK8yK.jpg)
 
 ## 📚 Course Catalog
 
